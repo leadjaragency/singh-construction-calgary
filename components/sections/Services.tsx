@@ -30,26 +30,25 @@ const services = [
 export default function Services() {
   return (
     <section id="services" style={{
-      background: 'linear-gradient(180deg, var(--bg) 0%, #0f0e0a 50%, var(--bg) 100%)',
+      background: 'var(--bg-light)',
       padding: '100px 0',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Subtle center glow */}
+      {/* Subtle top divider accent */}
       <div style={{
-        position: 'absolute', top: '40%', left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: 800, height: 400,
-        background: 'radial-gradient(ellipse, rgba(212,160,23,0.06) 0%, transparent 70%)',
-        pointerEvents: 'none',
+        position: 'absolute', top: 0, left: 0, right: 0,
+        height: 4,
+        background: 'linear-gradient(90deg, transparent, var(--gold), transparent)',
+        opacity: 0.35,
       }} />
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 72 }}>
           <span className="section-tag">What We Do</span>
-          <h2 className="section-title">Our Services</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title dark">Our Services</h2>
+          <p className="section-subtitle dark">
             Specialized construction services built on 13+ years of hands-on experience across Calgary and surrounding areas.
           </p>
         </div>
@@ -68,6 +67,7 @@ export default function Services() {
               image={s.image}
               description={s.description}
               delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}
+              variant="light"
             />
           ))}
         </div>

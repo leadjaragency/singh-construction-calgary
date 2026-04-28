@@ -8,7 +8,7 @@ const hours = [
 
 export default function Contact() {
   return (
-    <section id="contact" style={{ backgroundColor: 'var(--surface)', padding: '90px 0' }}>
+    <section id="contact" style={{ backgroundColor: 'var(--bg)', padding: '90px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
@@ -87,9 +87,9 @@ export default function Contact() {
 
             {/* Hours */}
             <div style={{
-              backgroundColor: 'var(--bg)',
+              backgroundColor: 'rgba(255,255,255,0.04)',
               borderRadius: 10, padding: '28px 24px',
-              border: '1px solid var(--divider)',
+              border: '1px solid rgba(255,255,255,0.1)',
             }}>
               <p style={{
                 fontFamily: 'var(--font-heading)',
@@ -123,9 +123,9 @@ export default function Contact() {
 
           {/* Right — form */}
           <div className="reveal-right" style={{
-            backgroundColor: 'var(--bg)',
+            backgroundColor: 'rgba(255,255,255,0.05)',
             borderRadius: 12, padding: '48px 40px',
-            border: '1px solid var(--divider)',
+            border: '1px solid rgba(255,255,255,0.12)',
           }}>
             <h3 style={{
               fontFamily: 'var(--font-heading)',

@@ -9,7 +9,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" style={{ backgroundColor: 'var(--bg)', padding: '90px 0' }}>
+    <section id="about" style={{ backgroundColor: 'var(--bg-white)', padding: '90px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
         <div style={{
           display: 'grid',
@@ -32,7 +32,7 @@ export default function About() {
               width: '100%', aspectRatio: '4/3',
               borderRadius: 10, overflow: 'hidden',
               position: 'relative', zIndex: 1,
-              boxShadow: '0 20px 60px rgba(0,0,0,0.6)',
+              boxShadow: '0 20px 60px rgba(12,26,46,0.18)',
             }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -70,21 +70,21 @@ export default function About() {
           {/* Content side */}
           <div className="reveal-right">
             <span className="section-tag">Who We Are</span>
-            <h2 className="section-title" style={{ textAlign: 'left', marginBottom: 16 }}>
+            <h2 className="section-title dark" style={{ textAlign: 'left', marginBottom: 16 }}>
               Calgary&apos;s Construction<br />
               <span style={{ color: 'var(--gold)' }}>Experts You Can Trust</span>
             </h2>
-            <p style={{ fontSize: 16, color: 'var(--text-muted)', lineHeight: 1.85, marginBottom: 14 }}>
+            <p style={{ fontSize: 16, color: 'var(--text-dark-muted)', lineHeight: 1.85, marginBottom: 14 }}>
               Singh Construction Calgary has been building and renovating homes and commercial spaces across Calgary and Alberta for over 13 years. Founded on the principles of quality, integrity, and client satisfaction, we bring every project to life with the same dedication we&apos;d give our own home.
             </p>
-            <p style={{ fontSize: 16, color: 'var(--text-muted)', lineHeight: 1.85, marginBottom: 28 }}>
+            <p style={{ fontSize: 16, color: 'var(--text-dark-muted)', lineHeight: 1.85, marginBottom: 28 }}>
               Our experienced team handles everything from initial design consultation through to final walkthrough — so you always know exactly where your project stands.
             </p>
 
             {/* Feature list */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14, marginBottom: 36 }}>
               {features.map((f) => (
-                <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-heading)', fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>
+                <div key={f} style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: 'var(--font-heading)', fontSize: 13, fontWeight: 600, color: 'var(--text-dark)' }}>
                   <i className="fas fa-check-circle" style={{ color: 'var(--gold)', fontSize: 15, flexShrink: 0 }} />
                   {f}
                 </div>
@@ -99,7 +99,7 @@ export default function About() {
                 fontFamily: 'var(--font-heading)',
                 fontSize: 13, fontWeight: 700, letterSpacing: '1.5px',
                 textTransform: 'uppercase',
-                backgroundColor: 'var(--gold)', color: '#0D0D0D',
+                backgroundColor: 'var(--gold)', color: '#0C1A2E',
                 borderRadius: 6, border: '2px solid var(--gold)',
                 transition: 'var(--transition)',
               }}

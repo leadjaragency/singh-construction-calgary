@@ -41,7 +41,7 @@ function PortfolioCard({ item }: { item: typeof items[0] }) {
         position: 'relative',
         borderRadius: 12,
         overflow: 'hidden',
-        backgroundColor: 'var(--surface)',
+        backgroundColor: '#1A2535',
         cursor: 'pointer',
         gridColumn: item.span === 'large' ? 'span 2' : 'span 1',
         aspectRatio: item.span === 'large' ? '16/9' : '4/3',
@@ -112,26 +112,25 @@ function PortfolioCard({ item }: { item: typeof items[0] }) {
 export default function Portfolio() {
   return (
     <section id="portfolio" style={{
-      background: 'linear-gradient(180deg, #0D0D0D 0%, #0f0e09 50%, #0D0D0D 100%)',
+      background: '#F2F4F7',
       padding: '100px 0',
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Top glow */}
+      {/* Top divider accent */}
       <div style={{
-        position: 'absolute', top: 0, left: '50%',
-        transform: 'translateX(-50%)',
-        width: 600, height: 200,
-        background: 'radial-gradient(ellipse, rgba(212,160,23,0.06) 0%, transparent 70%)',
-        pointerEvents: 'none',
+        position: 'absolute', top: 0, left: 0, right: 0,
+        height: 4,
+        background: 'linear-gradient(90deg, transparent, var(--gold), transparent)',
+        opacity: 0.3,
       }} />
 
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px', position: 'relative' }}>
         {/* Header */}
         <div className="reveal" style={{ textAlign: 'center', marginBottom: 64 }}>
           <span className="section-tag">Our Work</span>
-          <h2 className="section-title">Built in Calgary. Built to Last.</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title dark">Built in Calgary. Built to Last.</h2>
+          <p className="section-subtitle dark">
             A look at the projects we&apos;ve delivered — from framing to foundations, tear-downs to site management.
           </p>
         </div>

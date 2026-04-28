@@ -8,10 +8,32 @@ interface ServiceCardProps {
   description: string;
   image?: string;
   delay?: number;
+  variant?: 'dark' | 'light';
 }
 
-export default function ServiceCard({ icon, title, description, image, delay = 0 }: ServiceCardProps) {
+export default function ServiceCard({ icon, title, description, image, delay = 0, variant = 'dark' }: ServiceCardProps) {
   const [hovered, setHovered] = useState(false);
+  const isLight = variant === 'light';
+
+  const cardBg = isLight
+    ? (hovered ? '#FFFFFF' : '#FFFFFF')
+    : (hovered ? 'linear-gradient(180deg, #112240 0%, #0C1A2E 100%)' : 'linear-gradient(180deg, #112240 0%, #0E1F3A 100%)');
+
+  const cardBorder = hovered
+    ? '1px solid rgba(212,160,23,0.5)'
+    : isLight ? '1px solid #DDE3EC' : '1px solid rgba(255,255,255,0.07)';
+
+  const cardShadow = hovered
+    ? isLight
+      ? '0 20px 48px rgba(12,26,46,0.14), 0 0 30px rgba(212,160,23,0.08)'
+      : '0 24px 64px rgba(0,0,0,0.55), 0 0 40px rgba(212,160,23,0.08)'
+    : isLight
+      ? '0 2px 16px rgba(12,26,46,0.08)'
+      : '0 4px 20px rgba(0,0,0,0.3)';
+
+  const imgGradient = isLight
+    ? 'linear-gradient(to bottom, transparent 0%, #FFFFFF 100%)'
+    : 'linear-gradient(to bottom, transparent 0%, #112240 100%)';
 
   return (
     <div
@@ -19,15 +41,13 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: 'linear-gradient(180deg, #181818 0%, #141414 100%)',
+        background: cardBg,
         borderRadius: 12,
         overflow: 'hidden',
         position: 'relative',
-        border: hovered ? '1px solid rgba(212,160,23,0.45)' : '1px solid rgba(255,255,255,0.06)',
+        border: cardBorder,
         transform: hovered ? 'translateY(-8px)' : 'translateY(0)',
-        boxShadow: hovered
-          ? '0 24px 64px rgba(0,0,0,0.65), 0 0 40px rgba(212,160,23,0.08)'
-          : '0 4px 20px rgba(0,0,0,0.3)',
+        boxShadow: cardShadow,
         transition: 'all 0.38s ease',
         cursor: 'default',
       }}
@@ -54,19 +74,16 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
               display: 'block',
             }}
           />
-          {/* Overlay tint — darkens the image slightly for consistency */}
           <div style={{
             position: 'absolute', inset: 0,
-            backgroundColor: hovered ? 'rgba(0,0,0,0.25)' : 'rgba(0,0,0,0.40)',
+            backgroundColor: hovered ? 'rgba(0,0,0,0.20)' : 'rgba(0,0,0,0.35)',
             transition: 'background-color 0.4s ease',
           }} />
-          {/* Gradient blend: image → card background (seamless fade) */}
           <div style={{
             position: 'absolute', bottom: 0, left: 0, right: 0,
             height: '55%',
-            background: 'linear-gradient(to bottom, transparent 0%, #181818 100%)',
+            background: imgGradient,
           }} />
-          {/* Gold bottom line on hover */}
           <div style={{
             position: 'absolute', bottom: 0, left: 0, right: 0,
             height: 2,
@@ -78,23 +95,22 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
 
       {/* ── Card body ── */}
       <div style={{ padding: '28px 28px 34px' }}>
-        {/* Icon */}
         <div style={{
           width: 56, height: 56,
           background: hovered
             ? 'linear-gradient(135deg, var(--gold) 0%, #f0b429 100%)'
-            : 'rgba(212,160,23,0.10)',
+            : isLight ? 'rgba(212,160,23,0.10)' : 'rgba(212,160,23,0.10)',
           borderRadius: 12,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           marginBottom: 18,
-          border: hovered ? 'none' : '1px solid rgba(212,160,23,0.20)',
+          border: hovered ? 'none' : '1px solid rgba(212,160,23,0.22)',
           boxShadow: hovered ? '0 6px 20px rgba(212,160,23,0.30)' : 'none',
           transition: 'all 0.35s ease',
           flexShrink: 0,
         }}>
           <i className={icon} style={{
             fontSize: 22,
-            color: hovered ? '#0D0D0D' : 'var(--gold)',
+            color: hovered ? '#0C1A2E' : 'var(--gold)',
             transition: 'color 0.35s ease',
           }} />
         </div>
@@ -102,7 +118,7 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
         <h3 style={{
           fontFamily: 'var(--font-heading)',
           fontSize: 19, fontWeight: 700,
-          color: '#fff',
+          color: isLight ? 'var(--text-dark)' : '#E8EDF5',
           marginBottom: 12,
           letterSpacing: '-0.3px',
         }}>
@@ -110,7 +126,9 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
         </h3>
         <p style={{
           fontSize: 14.5,
-          color: hovered ? 'rgba(229,229,229,0.85)' : 'var(--text-muted)',
+          color: isLight
+            ? (hovered ? 'var(--text-dark-sub)' : 'var(--text-dark-muted)')
+            : (hovered ? 'rgba(232,237,245,0.88)' : 'var(--text-muted)'),
           lineHeight: 1.8,
           transition: 'color 0.35s ease',
         }}>

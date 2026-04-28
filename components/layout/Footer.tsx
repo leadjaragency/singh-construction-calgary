@@ -17,7 +17,7 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer style={{ backgroundColor: '#0A0A0A', paddingTop: 72 }}>
+    <footer style={{ backgroundColor: '#08111E', paddingTop: 72 }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 24px' }}>
         {/* Grid */}
         <div style={{

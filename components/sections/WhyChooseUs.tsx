@@ -75,7 +75,7 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <section id="why" style={{
-      background: 'linear-gradient(180deg, #0D0D0D 0%, #111109 50%, #0D0D0D 100%)',
+      background: 'linear-gradient(180deg, #0C1A2E 0%, #0E1E36 50%, #0C1A2E 100%)',
       padding: '100px 0',
       position: 'relative',
       overflow: 'hidden',
@@ -103,7 +103,7 @@ export default function WhyChooseUs() {
         <div className="reveal" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          background: 'linear-gradient(135deg, #181610 0%, #1a1a1a 100%)',
+          background: 'linear-gradient(135deg, #112240 0%, #0E1E38 100%)',
           borderRadius: 14,
           overflow: 'hidden',
           border: '1px solid rgba(212,160,23,0.2)',
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
               key={r.title}
               className={`reveal reveal-delay-${i + 1}`}
               style={{
-                background: 'linear-gradient(135deg, #181818 0%, #141414 100%)',
+                background: 'linear-gradient(135deg, #152A4E 0%, #112240 100%)',
                 borderRadius: 12,
                 padding: '36px 28px',
                 border: '1px solid rgba(255,255,255,0.06)',
