@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.zoho.com',
+  host: 'smtp.zohocloud.ca',
   port: 465,
   secure: true,
   auth: {

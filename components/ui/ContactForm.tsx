@@ -1,7 +1,6 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import type { ContactFormData } from '@/types/contact';
 
 const SERVICES = [
@@ -54,21 +53,12 @@ export default function ContactForm() {
 
     setLoading(true);
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          from_email: form.email,
-          phone: form.phone,
-          service: form.service,
-          budget: form.budget || 'Not specified',
-          message: form.message,
-          to_email: 'info@singhconstructions.ca',
-          reply_to: form.email,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
-      );
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error('Failed');
       setSuccess(true);
       setForm(empty);
     } catch {
@@ -82,15 +72,15 @@ export default function ContactForm() {
     return (
       <div style={{
         textAlign: 'center', padding: '48px 28px',
-        backgroundColor: 'rgba(39,174,96,0.08)',
-        border: '2px solid #27ae60',
-        borderRadius: 10, color: '#27ae60',
+        backgroundColor: 'rgba(252,185,0,0.08)',
+        border: '2px solid #fcb900',
+        borderRadius: 10, color: '#fcb900',
       }}>
         <i className="fas fa-check-circle" style={{ fontSize: 48, marginBottom: 16 }} />
         <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: 22, fontWeight: 700, marginBottom: 10 }}>
           Enquiry Sent!
         </h3>
-        <p style={{ fontSize: 15, lineHeight: 1.7, color: 'rgba(39,174,96,0.85)' }}>
+        <p style={{ fontSize: 15, lineHeight: 1.7, color: 'rgba(252,185,0,0.85)' }}>
           Thank you for reaching out. We&apos;ll be in touch within 1 business day.
         </p>
         <button
@@ -99,7 +89,7 @@ export default function ContactForm() {
             marginTop: 24,
             fontFamily: 'var(--font-heading)', fontSize: 12, fontWeight: 700,
             letterSpacing: '1.5px', textTransform: 'uppercase',
-            color: '#27ae60', background: 'none', border: '2px solid #27ae60',
+            color: '#fcb900', background: 'none', border: '2px solid #fcb900',
             borderRadius: 4, padding: '10px 22px', cursor: 'pointer',
           }}
         >
