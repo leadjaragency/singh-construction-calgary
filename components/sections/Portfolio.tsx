@@ -75,7 +75,7 @@ function PortfolioCard({ item }: { item: typeof items[0] }) {
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0,
         height: 3,
-        background: 'linear-gradient(90deg, var(--gold), rgba(212,160,23,0.3))',
+        background: 'linear-gradient(90deg, var(--gold), rgba(252,185,0,0.3))',
         transform: hovered ? 'scaleX(1)' : 'scaleX(0)',
         transformOrigin: 'left',
         transition: 'transform 0.4s ease',

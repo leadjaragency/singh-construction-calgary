@@ -17,16 +17,16 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
 
   const cardBg = isLight
     ? (hovered ? '#FFFFFF' : '#FFFFFF')
-    : (hovered ? 'linear-gradient(180deg, #112240 0%, #0C1A2E 100%)' : 'linear-gradient(180deg, #112240 0%, #0E1F3A 100%)');
+    : (hovered ? 'linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%)' : 'linear-gradient(180deg, #1A1A1A 0%, #141414 100%)');
 
   const cardBorder = hovered
-    ? '1px solid rgba(212,160,23,0.5)'
+    ? '1px solid rgba(252,185,0,0.5)'
     : isLight ? '1px solid #DDE3EC' : '1px solid rgba(255,255,255,0.07)';
 
   const cardShadow = hovered
     ? isLight
-      ? '0 20px 48px rgba(12,26,46,0.14), 0 0 30px rgba(212,160,23,0.08)'
-      : '0 24px 64px rgba(0,0,0,0.55), 0 0 40px rgba(212,160,23,0.08)'
+      ? '0 20px 48px rgba(12,26,46,0.14), 0 0 30px rgba(252,185,0,0.08)'
+      : '0 24px 64px rgba(0,0,0,0.55), 0 0 40px rgba(252,185,0,0.08)'
     : isLight
       ? '0 2px 16px rgba(12,26,46,0.08)'
       : '0 4px 20px rgba(0,0,0,0.3)';
@@ -87,7 +87,7 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
           <div style={{
             position: 'absolute', bottom: 0, left: 0, right: 0,
             height: 2,
-            background: hovered ? 'linear-gradient(90deg, var(--gold) 0%, rgba(212,160,23,0.3) 100%)' : 'transparent',
+            background: hovered ? 'linear-gradient(90deg, var(--gold) 0%, rgba(252,185,0,0.3) 100%)' : 'transparent',
             transition: 'background 0.35s ease',
           }} />
         </div>
@@ -98,13 +98,13 @@ export default function ServiceCard({ icon, title, description, image, delay = 0
         <div style={{
           width: 56, height: 56,
           background: hovered
-            ? 'linear-gradient(135deg, var(--gold) 0%, #f0b429 100%)'
-            : isLight ? 'rgba(212,160,23,0.10)' : 'rgba(212,160,23,0.10)',
+            ? 'linear-gradient(135deg, var(--gold) 0%, #ffd000 100%)'
+            : isLight ? 'rgba(252,185,0,0.10)' : 'rgba(252,185,0,0.10)',
           borderRadius: 12,
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           marginBottom: 18,
-          border: hovered ? 'none' : '1px solid rgba(212,160,23,0.22)',
-          boxShadow: hovered ? '0 6px 20px rgba(212,160,23,0.30)' : 'none',
+          border: hovered ? 'none' : '1px solid rgba(252,185,0,0.22)',
+          boxShadow: hovered ? '0 6px 20px rgba(252,185,0,0.30)' : 'none',
           transition: 'all 0.35s ease',
           flexShrink: 0,
         }}>

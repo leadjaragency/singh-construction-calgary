@@ -63,7 +63,7 @@ export default function Hero() {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        backgroundColor: '#0C1A2E',
+        backgroundColor: '#0D0D0D',
         overflow: 'hidden',
       }}
     >
@@ -86,21 +86,21 @@ export default function Hero() {
       {/* Directional gradient overlay — dark left for text, fading right */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(to right, rgba(12,26,46,0.97) 0%, rgba(12,26,46,0.78) 45%, rgba(12,26,46,0.35) 100%)',
+        background: 'linear-gradient(to right, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.78) 45%, rgba(13,13,13,0.35) 100%)',
       }} />
 
       {/* Bottom vignette for depth */}
       <div style={{
         position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 1,
         height: 200,
-        background: 'linear-gradient(to top, rgba(12,26,46,0.85) 0%, transparent 100%)',
+        background: 'linear-gradient(to top, rgba(13,13,13,0.85) 0%, transparent 100%)',
       }} />
 
       {/* Gold ambient glow behind the text area */}
       <div style={{
         position: 'absolute', top: '30%', left: '-5%', zIndex: 1,
         width: 500, height: 400,
-        background: 'radial-gradient(ellipse, rgba(212,160,23,0.07) 0%, transparent 65%)',
+        background: 'radial-gradient(ellipse, rgba(252,185,0,0.07) 0%, transparent 65%)',
         pointerEvents: 'none',
       }} />
 

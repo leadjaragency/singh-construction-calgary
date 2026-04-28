@@ -22,7 +22,7 @@ export default function About() {
             {/* Outer frame with gold accent border */}
             <div style={{
               position: 'absolute', top: -12, left: -12, right: 28, bottom: 28,
-              border: '2px solid rgba(212,160,23,0.25)',
+              border: '2px solid rgba(252,185,0,0.25)',
               borderRadius: 12,
               pointerEvents: 'none',
               zIndex: 0,
@@ -51,11 +51,11 @@ export default function About() {
             {/* Years badge */}
             <div style={{
               position: 'absolute', bottom: -24, right: -24, zIndex: 2,
-              background: 'linear-gradient(135deg, #D4A017 0%, #F0B429 100%)',
+              background: 'linear-gradient(135deg, #fcb900 0%, #ffd000 100%)',
               color: '#0D0D0D',
               padding: '22px 18px', borderRadius: 10,
               textAlign: 'center',
-              boxShadow: '0 12px 40px rgba(212,160,23,0.4)',
+              boxShadow: '0 12px 40px rgba(252,185,0,0.4)',
               minWidth: 116,
             }}>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: 44, fontWeight: 900, lineHeight: 1 }}>

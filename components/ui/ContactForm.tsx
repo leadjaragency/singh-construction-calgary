@@ -151,7 +151,7 @@ export default function ContactForm() {
           <input
             type="tel"
             className={`form-input${errors.phone ? ' error' : ''}`}
-            placeholder="+1 (403) 000-0000"
+            placeholder="+1 (613) 000-0000"
             value={form.phone}
             onChange={(e) => handleChange('phone', e.target.value)}
           />
@@ -200,7 +200,7 @@ export default function ContactForm() {
         }}>
           <i className="fas fa-exclamation-circle" style={{ marginRight: 8 }} />
           Something went wrong. Please call us directly at{' '}
-          <a href="tel:+14031234567" style={{ color: '#e74c3c', fontWeight: 600 }}>+1 (403) 123-4567</a>.
+          <a href="tel:+16132030424" style={{ color: '#e74c3c', fontWeight: 600 }}>+1 (613) 203-0424</a>.
         </div>
       )}
 

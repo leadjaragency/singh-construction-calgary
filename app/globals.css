@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0C1A2E;
-  --color-surface: #112240;
-  --color-surface-2: #152A4E;
-  --color-divider: #1E3358;
-  --color-gold: #D4A017;
-  --color-gold-hover: #F0B429;
+  --color-bg: #0D0D0D;
+  --color-surface: #1A1A1A;
+  --color-surface-2: #222222;
+  --color-divider: #2A2A2A;
+  --color-gold: #fcb900;
+  --color-gold-hover: #ffd000;
   --color-text: #E5E5E5;
   --color-muted: #9A9A9A;
   --font-heading: var(--font-montserrat), sans-serif;
@@ -14,17 +14,17 @@
 }
 
 :root {
-  /* Dark / navy palette (hero, why, contact, footer) */
-  --bg: #0C1A2E;
-  --surface: #112240;
-  --surface-2: #152A4E;
-  --divider: #1E3358;
-  --gold: #D4A017;
-  --gold-hover: #F0B429;
-  --gold-dim: rgba(212, 160, 23, 0.12);
-  --gold-glow: rgba(212, 160, 23, 0.22);
-  --text: #E8EDF5;
-  --text-muted: #8A9AB8;
+  /* Dark palette (hero, why, contact, footer) */
+  --bg: #0D0D0D;
+  --surface: #1A1A1A;
+  --surface-2: #222222;
+  --divider: #2A2A2A;
+  --gold: #fcb900;
+  --gold-hover: #ffd000;
+  --gold-dim: rgba(252, 185, 0, 0.12);
+  --gold-glow: rgba(252, 185, 0, 0.22);
+  --text: #E5E5E5;
+  --text-muted: #9A9A9A;
   --transition: all 0.3s ease;
   --radius: 10px;
   --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.45);

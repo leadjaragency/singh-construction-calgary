@@ -39,11 +39,11 @@ export default function Contact() {
                   icon: 'fas fa-phone',
                   label: 'Phone',
                   value: (
-                    <a href="tel:+14031234567" style={{ color: 'var(--text)', transition: 'var(--transition)' }}
+                    <a href="tel:+16132030424" style={{ color: 'var(--text)', transition: 'var(--transition)' }}
                       onMouseEnter={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'var(--gold)')}
                       onMouseLeave={(e: React.MouseEvent<HTMLAnchorElement>) => (e.currentTarget.style.color = 'var(--text)')}
                     >
-                      +1 (403) 123-4567
+                      +1 (613) 203-0424
                     </a>
                   ),
                 },

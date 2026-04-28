@@ -83,7 +83,7 @@ function ProjectCard({ src, onOpen }: { src: string; onOpen: () => void }) {
         overflow: 'hidden',
         backgroundColor: 'var(--surface)',
         cursor: 'zoom-in',
-        border: hovered ? '1px solid rgba(212,160,23,0.4)' : '1px solid rgba(255,255,255,0.06)',
+        border: hovered ? '1px solid rgba(252,185,0,0.4)' : '1px solid rgba(255,255,255,0.06)',
         boxShadow: hovered ? '0 20px 56px rgba(0,0,0,0.6)' : '0 4px 20px rgba(0,0,0,0.3)',
         transform: hovered ? 'translateY(-5px)' : 'translateY(0)',
         transition: 'all 0.32s ease',
@@ -113,7 +113,7 @@ function ProjectCard({ src, onOpen }: { src: string; onOpen: () => void }) {
       {/* Gold top accent */}
       <div style={{
         position: 'absolute', top: 0, left: 0, right: 0, height: 3,
-        background: 'linear-gradient(90deg, var(--gold), rgba(212,160,23,0.2))',
+        background: 'linear-gradient(90deg, var(--gold), rgba(252,185,0,0.2))',
         transform: hovered ? 'scaleX(1)' : 'scaleX(0)',
         transformOrigin: 'left',
         transition: 'transform 0.38s ease',
@@ -123,7 +123,7 @@ function ProjectCard({ src, onOpen }: { src: string; onOpen: () => void }) {
       <div style={{
         position: 'absolute', top: 14, right: 14,
         width: 36, height: 36, borderRadius: '50%',
-        background: 'rgba(212,160,23,0.9)',
+        background: 'rgba(252,185,0,0.9)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         opacity: hovered ? 1 : 0,
         transform: hovered ? 'scale(1)' : 'scale(0.6)',
@@ -166,7 +166,7 @@ export default function ProjectsPage() {
           position: 'absolute', top: '50%', left: '50%',
           transform: 'translate(-50%,-50%)',
           width: 700, height: 350,
-          background: 'radial-gradient(ellipse, rgba(212,160,23,0.10) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(252,185,0,0.10) 0%, transparent 70%)',
           pointerEvents: 'none',
         }} />
 

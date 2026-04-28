@@ -75,7 +75,7 @@ const reasons = [
 export default function WhyChooseUs() {
   return (
     <section id="why" style={{
-      background: 'linear-gradient(180deg, #0C1A2E 0%, #0E1E36 50%, #0C1A2E 100%)',
+      background: 'linear-gradient(180deg, #0D0D0D 0%, #111111 50%, #0D0D0D 100%)',
       padding: '100px 0',
       position: 'relative',
       overflow: 'hidden',
@@ -85,7 +85,7 @@ export default function WhyChooseUs() {
         position: 'absolute', bottom: 0, left: '50%',
         transform: 'translateX(-50%)',
         width: 700, height: 300,
-        background: 'radial-gradient(ellipse, rgba(212,160,23,0.07) 0%, transparent 70%)',
+        background: 'radial-gradient(ellipse, rgba(252,185,0,0.07) 0%, transparent 70%)',
         pointerEvents: 'none',
       }} />
 
@@ -103,12 +103,12 @@ export default function WhyChooseUs() {
         <div className="reveal" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(3, 1fr)',
-          background: 'linear-gradient(135deg, #112240 0%, #0E1E38 100%)',
+          background: 'linear-gradient(135deg, #1A1A1A 0%, #141414 100%)',
           borderRadius: 14,
           overflow: 'hidden',
-          border: '1px solid rgba(212,160,23,0.2)',
+          border: '1px solid rgba(252,185,0,0.2)',
           marginBottom: 72,
-          boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 60px rgba(212,160,23,0.05)',
+          boxShadow: '0 8px 40px rgba(0,0,0,0.5), 0 0 60px rgba(252,185,0,0.05)',
         }}>
           {stats.map((s) => (
             <AnimatedStat key={s.label} {...s} />
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
               key={r.title}
               className={`reveal reveal-delay-${i + 1}`}
               style={{
-                background: 'linear-gradient(135deg, #152A4E 0%, #112240 100%)',
+                background: 'linear-gradient(135deg, #1A1A1A 0%, #141414 100%)',
                 borderRadius: 12,
                 padding: '36px 28px',
                 border: '1px solid rgba(255,255,255,0.06)',
@@ -134,9 +134,9 @@ export default function WhyChooseUs() {
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLDivElement;
-                el.style.borderColor = 'rgba(212,160,23,0.4)';
+                el.style.borderColor = 'rgba(252,185,0,0.4)';
                 el.style.transform = 'translateY(-6px)';
-                el.style.boxShadow = '0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(212,160,23,0.07)';
+                el.style.boxShadow = '0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(252,185,0,0.07)';
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLDivElement;
@@ -147,11 +147,11 @@ export default function WhyChooseUs() {
             >
               <div style={{
                 width: 62, height: 62,
-                background: 'linear-gradient(135deg, rgba(212,160,23,0.15) 0%, rgba(212,160,23,0.05) 100%)',
+                background: 'linear-gradient(135deg, rgba(252,185,0,0.15) 0%, rgba(252,185,0,0.05) 100%)',
                 borderRadius: 14,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 marginBottom: 20,
-                border: '1px solid rgba(212,160,23,0.2)',
+                border: '1px solid rgba(252,185,0,0.2)',
               }}>
                 <i className={r.icon} style={{ fontSize: 24, color: 'var(--gold)' }} />
               </div>
@@ -170,7 +170,7 @@ export default function WhyChooseUs() {
         @media (max-width: 640px) {
           .stat-item {
             border-right: none !important;
-            border-bottom: 1px solid rgba(212,160,23,0.15);
+            border-bottom: 1px solid rgba(252,185,0,0.15);
           }
           .stat-item:last-child { border-bottom: none; }
           #why > div > div:nth-child(3) {
